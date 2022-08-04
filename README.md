@@ -92,6 +92,50 @@ Example: NULL value in “number_of_courses” taken by a student represents tha
 
 Intermediate DBMS Interview Questions
 
-8. What is
+8. What is Data Warehousing?
 
+The process of collecting, extracting, transforming, and loading data from multiple sources and storing them in one database is known as data warehousing. A data warehouse can be considered as a central repository where data flows from transactional systems and other relational databases and is used for data analytics. A data warehouse comprises a wide variety of an organization’s historical data that supports the decision-making process in an organization.
 
+![image](https://user-images.githubusercontent.com/81725794/182898630-e7cb7ec7-7580-4b6f-ad86-4df002cd1ad9.png)
+
+9. Explain different levels of data abstraction in a DBMS.
+
+The process of hiding irrelevant details from users is known as data abstraction. Data abstraction can be divided into 3 levels:
+
+![image](https://user-images.githubusercontent.com/81725794/182898740-24172389-2a7f-416f-b2be-c56997fb6e5f.png)
+
+Physical Level:  it is the lowest level and is managed by DBMS. This level consists of data storage descriptions and the details of this level are typically hidden from system admins, developers, and users.
+
+Conceptual or Logical level:  it is the level on which developers and system admins work and it determines what data is stored in the database and what is the relationship between the data points.
+
+External or View level: it is the level that describes only part of the database and hides the details of the table schema and its physical storage from the users. The result of a query is an example of View level data abstraction.  A view is a virtual table created by selecting fields from one or more tables present in the database.
+
+10. What is meant by an entity-relationship (E-R) model? Explain the terms Entity, Entity Type, and Entity Set in DBMS.
+
+An entity-relationship model is a diagrammatic approach to a database design where real-world objects are represented as entities and relationships between them are mentioned.
+
+![image](https://user-images.githubusercontent.com/81725794/182898973-a71f9805-d494-4305-84ea-3b3aea9b8761.png)
+
+Entity: An entity is defined as a real-world object having attributes that represent characteristics of that particular object. For example, a student, an employee, or a teacher represents an entity.
+Entity Type: An entity type is defined as a collection of entities that have the same attributes. One or more related tables in a database represent an entity type. Entity type or attributes can be understood as a characteristic which uniquely identifies the entity.  For example, a student represents an entity that has attributes such as student_id, student_name, etc.
+Entity Set: An entity set can be defined as a set of all the entities present in a specific entity type in a database. For example, a set of all the students, employees, teachers, etc. represent an entity set.
+
+11. Explain different types of relationships amongst tables in a DBMS.
+
+Following are different types of relationship amongst tables in a DBMS system:
+
+1. One to One Relationship:  This type of relationship is applied when a particular row in table X is linked to a singular row in table Y.
+
+![image](https://user-images.githubusercontent.com/81725794/182899136-deca7ea6-a395-42c6-a4a8-1c166acc137e.png)
+
+2. One to Many Relationship: This type of relationship is applied when a single row in table X is related to many rows in table Y.
+
+![image](https://user-images.githubusercontent.com/81725794/182899274-7fa583d8-e2d5-4f46-8bc1-fe61a7b4efbc.png)
+
+3. Many to Many Relationship: This type of relationship is applied when multiple rows in table X can be linked to multiple rows in table Y.
+
+![image](https://user-images.githubusercontent.com/81725794/182899373-b07a0fb6-9dfb-49d1-ae80-947fe9e4f5af.png)
+
+4. Self Referencing Relationship: This type of relationship is applied when a particular row in table X is associated with the same table.
+
+![image](https://user-images.githubusercontent.com/81725794/182899454-04f1fac0-a39b-4e51-9522-d790d9d588b5.png)
