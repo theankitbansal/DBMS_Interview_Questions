@@ -1,4 +1,5 @@
 # DBMS_Interview_Questions
+
 DBMS Basic Interview Questions
 
 
@@ -25,3 +26,72 @@ The absence of indexing in a traditional file-based system leaves us with the on
 Another issue is the lack of concurrency control, which leads to one operation locking the entire page, as compared to DBMS where multiple operations can work on a single file simultaneously.
 
 Integrity check, data isolation, atomicity, security, etc. are some other issues with traditional file-based systems for which DBMSs have provided some good solutions.
+
+4. Explain a few advantages of a DBMS.
+
+Following are the few advantages of using a DBMS. 
+
+![image](https://user-images.githubusercontent.com/81725794/182896967-3d42ec14-fa4f-4375-ac21-4e7096ebbf43.png)
+
+Data Sharing: Data from a single database can be simultaneously shared by multiple users. Such sharing also enables end-users to react to changes quickly in the database environment.
+
+Integrity constraints: The existence of such constraints allows storing of data in an organized and refined manner.
+
+Controlling redundancy in a database: Eliminates redundancy in a database by providing a mechanism that integrates all the data in a single database.
+
+Data Independence: This allows changing the data structure without altering the composition of any of the executing application programs.
+
+Provides backup and recovery facility: It can be configured to automatically create the backup of the data and restore the data in the database whenever required.
+
+Data Security: DBMS provides the necessary tools to make the storage and transfer of data more reliable and secure. Authentication (the process of giving restricted access to a user) and encryption (encrypting sensitive data such as OTP, credit card information, etc.) are some popular tools used to secure data in a DBMS.
+
+5. Explain different languages present in DBMS.
+
+Following are various languages present in DBMS:
+
+DDL(Data Definition Language):  It contains commands which are required to define the database.
+E.g., CREATE, ALTER, DROP, TRUNCATE, RENAME, etc.
+
+DML(Data Manipulation Language): It contains commands which are required to manipulate the data present in the database.
+E.g., SELECT, UPDATE, INSERT, DELETE, etc.
+
+DCL(Data Control Language):  It contains commands which are required to deal with the user permissions and controls of the database system.
+E.g., GRANT and REVOKE.
+
+TCL(Transaction Control Language):  It contains commands which are required to deal with the transaction of the database.
+E.g., COMMIT, ROLLBACK, and SAVEPOINT.
+
+6. What is meant by ACID properties in DBMS?
+
+ACID stands for Atomicity, Consistency, Isolation, and Durability in a DBMS these are those properties that ensure a safe and secure way of sharing data among multiple users.
+
+![image](https://user-images.githubusercontent.com/81725794/182897349-3c428929-f5d1-421a-b39f-6b1793994051.png)
+
+1. Atomicity: This property reflects the concept of either executing the whole query or executing nothing at all, which implies that if an update occurs in a database then that update should either be reflected in the whole database or should not be reflected at all.
+
+![image](https://user-images.githubusercontent.com/81725794/182897468-a3fb27b9-2733-4ac3-8b70-9fe1db9bde2a.png)
+
+![image](https://user-images.githubusercontent.com/81725794/182897507-87ae470d-cee5-4f48-8e13-309debaafe03.png)
+
+2. Consistency: This property ensures that the data remains consistent before and after a transaction in a database.
+
+![image](https://user-images.githubusercontent.com/81725794/182897608-3a260dab-30cd-44a2-9c3a-a71335ab3eda.png)
+
+3. Isolation: This property ensures that each transaction is occurring independently of the others. This implies that the state of an ongoing transaction doesn’t affect the state of another ongoing transaction.
+
+![image](https://user-images.githubusercontent.com/81725794/182897727-c73b0902-8846-42b5-b0ca-44c910c697ad.png)
+
+4. Durability: This property ensures that the data is not lost in cases of a system failure or restart and is present in the same state as it was before the system failure or restart.
+
+7. Are NULL values in a database the same as that of blank space or zero?
+
+No, a NULL value is very different from that of zero and blank space as it represents a value that is assigned, unknown, unavailable, or not applicable as compared to blank space which represents a character and zero represents a number.
+
+Example: NULL value in “number_of_courses” taken by a student represents that its value is unknown whereas 0 in it means that the student hasn’t taken any courses.
+
+
+Intermediate DBMS Interview Questions
+
+8. What is
+
+
