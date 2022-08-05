@@ -244,3 +244,20 @@ Composite Key:  A composite key refers to a combination of two or more columns t
 
 ![image](https://user-images.githubusercontent.com/81725794/183000746-2b0ccb02-576e-4134-892c-52db0650b4c8.png)
 
+18. Explain the difference between a 2-tier and 3-tier architecture in a DBMS.
+
+The 2-tier architecture refers to the client-server architecture in which applications at the client end directly communicate with the database at the server end without any middleware involved.
+Example – Contact Management System created using MS-Access or Railway Reservation System, etc.
+
+![image](https://user-images.githubusercontent.com/81725794/183000803-6f55da92-ce65-4a14-b24f-e9ef8c59413e.png)
+
+The above picture represents a 2-tier architecture in a DBMS.
+
+The 3-tier architecture contains another layer between the client and the server to provide GUI to the users and make the system much more secure and accessible. In this type of architecture, the application present on the client end interacts with an application on the server end which further communicates with the database system.
+
+Example – Designing registration form which contains a text box, label, button or a large website on the Internet, etc.
+
+![image](https://user-images.githubusercontent.com/81725794/183000826-8b58f67d-ebf1-46a2-b5b3-79de6def368e.png)
+
+The above picture represents a 3-tier architecture in a DBMS.
+
