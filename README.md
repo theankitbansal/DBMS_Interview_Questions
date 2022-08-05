@@ -178,4 +178,69 @@ Denormalization is the reverse process of normalization as it combines the table
 Advanced DBMS Interview Questions
 
 16. Explain different types of Normalization forms in a DBMS.
+
 Following are the major normalization forms in a DBMS:
+
+![image](https://user-images.githubusercontent.com/81725794/183000489-2d9bad78-82bc-4db9-981c-52d7107d2529.png)
+
+![image](https://user-images.githubusercontent.com/81725794/183000511-90f4aa71-6fe3-4060-b06d-b0fcd6dc4dd6.png)
+
+Considering the above Table-1 as the reference example for understanding different normalization forms.
+
+1NF: It is known as the first normal form and is the simplest type of normalization that you can implement in a database. A table to be in its first normal form should satisfy the following conditions:
+Every column must have a single value and should be atomic.
+Duplicate columns from the same table should be removed.
+Separate tables should be created for each group of related data and each row should be identified with a unique column.
+
+![image](https://user-images.githubusercontent.com/81725794/183000535-fbda5fa5-b4b6-4b33-a711-4cf2ec686be8.png)
+
+Table-1 converted to 1NF form
+
+2NF: It is known as the second normal form. A table to be in its second normal form should satisfy the following conditions:
+The table should be in its 1NF i.e. satisfy all the conditions of 1NF.
+Every non-prime attribute of the table should be fully functionally dependent on the primary key i.e. every non-key attribute should be dependent on the primary key in such a way that if any key element is deleted then even the non_key element will be saved in the database.
+
+![image](https://user-images.githubusercontent.com/81725794/183000586-04cfeb14-0929-4543-93a9-ca339a25a620.png)
+
+![image](https://user-images.githubusercontent.com/81725794/183000619-2ea71340-2d65-4ef5-9433-64dc098b3933.png)
+
+Breaking Table-1 into 2 different tables to move it to 2NF.
+
+3NF: It is known as the third normal form. A table to be in its second normal form should satisfy the following conditions:
+The table should be in its 2NF i.e. satisfy all the conditions of 2NF.
+There is no transitive functional dependency of one attribute on any attribute in the same table.
+
+![image](https://user-images.githubusercontent.com/81725794/183000641-3662f288-6544-4d9f-866a-58f042987d7d.png)
+
+![image](https://user-images.githubusercontent.com/81725794/183000643-5fd46bcd-0b77-4718-9334-fb0c51af0d96.png)
+
+![image](https://user-images.githubusercontent.com/81725794/183000660-a12fb6c8-aca6-4a46-a0e0-8f179bf5a8d4.png)
+
+Breaking Table-1 into 3 different tables to move it to 3NF. 
+
+BCNF: BCNF stands for Boyce-Codd Normal Form and is an advanced form of 3NF. It is also referred to as 3.5NF for the same reason. A table to be in its BCNF normal form should satisfy the following conditions:
+The table should be in its 3NF i.e. satisfy all the conditions of 3NF.
+For every functional dependency of any attribute A on B
+(A->B), A should be the super key of the table. It simply implies that A can’t be a non-prime attribute if B is a prime attribute.
+
+17. Explain different types of keys in a database.
+
+There are mainly 7 types of keys in a database:
+
+Candidate Key: The candidate key represents a set of properties that can uniquely identify a table. Each table may have multiple candidate keys. One key amongst all candidate keys can be chosen as a primary key. In the below example since studentId and firstName can be considered as a Candidate Key since they can uniquely identify every tuple.
+Super Key: The super key defines a set of attributes that can uniquely identify a tuple. Candidate key and primary key are subsets of the super key, in other words, the super key is their superset.
+
+![image](https://user-images.githubusercontent.com/81725794/183000706-b12b954a-062b-484a-aed0-bb75a99d31f9.png)
+
+Primary Key: The primary key defines a set of attributes that are used to uniquely identify every tuple. In the below example studentId and firstName are candidate keys and any one of them can be chosen as a Primary Key. In the given example studentId is chosen as the primary key for the student table.
+
+Unique Key: The unique key is very similar to the primary key except that primary keys don’t allow NULL values in the column but unique keys allow them. So essentially unique keys are primary keys with NULL values.
+
+Alternate Key: All the candidate keys which are not chosen as primary keys are considered as alternate Keys. In the below example, firstname and lastname are alternate keys in the database.
+
+Foreign Key:  The foreign key defines an attribute that can only take the values present in one table common to the attribute present in another table. In the below example courseId from the Student table is a foreign key to the Course table, as both, the tables contain courseId as one of their attributes.
+
+Composite Key:  A composite key refers to a combination of two or more columns that can uniquely identify each tuple in a table. In the below example the studentId and firstname can be grouped to uniquely identify every tuple in the table.
+
+![image](https://user-images.githubusercontent.com/81725794/183000746-2b0ccb02-576e-4134-892c-52db0650b4c8.png)
+
